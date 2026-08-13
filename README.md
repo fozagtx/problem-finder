@@ -26,6 +26,10 @@ This skill is designed for idea work where being able to pitch is not enough. It
 
 ## Installation
 
+Clone elsewhere → install into a skills dir. Never install onto the clone.
+
+This repository is a skill kit, not the installed skill. Clone it to a working directory, then run an installer so it copies `skill/` into a skills directory such as `~/.agents/skills/problem-finder` or `~/.claude/skills/problem-finder`. Do not clone this repo into a skills path and then install onto that same path — `install-custom.sh` option 2 would copy `skill/` over the git repo and can eat it. The custom installer refuses if the target looks like this clone (has `.git` and `install.sh`).
+
 ### Recommended
 
 ```bash
@@ -34,7 +38,7 @@ cd problem-finder
 ./install-custom.sh
 ```
 
-The custom installer lets you choose personal or project skill locations, including `.agents/skills`, `.claude/skills`, and a local project `skills/` folder.
+The custom installer lets you choose personal or project skill locations, including `.agents/skills`, `.claude/skills`, and a local project `skills/` folder. Pick a skills directory. Never point it at the clone.
 
 ### Standard
 

@@ -59,6 +59,16 @@ bash -n "$ROOT_DIR/install.sh"
 bash -n "$ROOT_DIR/install-custom.sh"
 bash -n "$ROOT_DIR/tests/validate_structure.sh"
 
+if ! grep -q 'Clone elsewhere → install into a skills dir. Never install onto the clone.' "$ROOT_DIR/README.md"; then
+  echo "README must say: clone elsewhere → install into a skills dir. Never install onto the clone." >&2
+  exit 1
+fi
+
+if ! grep -q 'TARGET_DIR/.git' "$ROOT_DIR/install-custom.sh" || ! grep -q 'TARGET_DIR/install.sh' "$ROOT_DIR/install-custom.sh"; then
+  echo "install-custom.sh must refuse if TARGET_DIR has .git and install.sh." >&2
+  exit 1
+fi
+
 blocked_terms=(
   "$(printf "%s%s" "Co" "dex")"
   "$(printf "%s%s" "Anth" "ropic")"
