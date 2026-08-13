@@ -18,3 +18,4 @@
 16. Name and kill the user's first framing in their words. A class label fails this rule.
 17. Do not import stall-trader workarounds onto a different prompt. The worked example is only E26.
 18. User-requested assumptions ("just assume they use WhatsApp") are still invented workarounds. Suspect report.
+19. Read [skill/router.md](../skill/router.md) first. Classify obvious vs non-obvious before any solution.
