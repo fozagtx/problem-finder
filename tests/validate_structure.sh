@@ -13,6 +13,7 @@ required_files=(
   "install.sh"
   "install-custom.sh"
   "skill/SKILL.md"
+  "skill/router.md"
   "skill/problem-workflow.md"
   "skill/workaround-map.md"
   "skill/signal-scores.md"
@@ -27,7 +28,6 @@ required_files=(
   "evals/results.md"
   "evals/trigger-results.md"
   "scripts/package_skill.sh"
-  "commands/check-edges.md"
   "agents/problem-analyst.md"
   "agents/workaround-mapper.md"
   "agents/framing-rejector.md"
@@ -36,6 +36,8 @@ required_files=(
   "commands/map-workaround.md"
   "commands/reject-framing.md"
   "commands/skill-demo.md"
+  "commands/check-edges.md"
+  "commands/route.md"
   "rules/no-solutioning.md"
   "tests/validate_structure.sh"
   "tests/validate_edge_cases.sh"
@@ -58,7 +60,7 @@ if ! grep -q '^description: .*Use when ' "$ROOT_DIR/skill/SKILL.md"; then
   exit 1
 fi
 
-for linked in problem-workflow.md workaround-map.md signal-scores.md framing-reject.md sharpen.md worked-example.md edge-cases.md; do
+for linked in router.md problem-workflow.md workaround-map.md signal-scores.md framing-reject.md sharpen.md worked-example.md edge-cases.md; do
   if ! grep -q "$linked" "$ROOT_DIR/skill/SKILL.md"; then
     echo "SKILL.md does not link $linked" >&2
     exit 1

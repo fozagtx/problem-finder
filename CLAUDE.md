@@ -22,12 +22,15 @@ This configuration turns the agent into a problem-discovery specialist. It is fo
 
 ## Progressive Disclosure
 
+Read `skill/router.md` first. Then load only the files that path names.
+
 | User asks about... | Read this skill file |
 |---|---|
+| Which files / how to apply / best path | `skill/router.md` |
 | Intake, restatement, full discovery | `skill/problem-workflow.md` |
 | What people do today | `skill/workaround-map.md` |
 | Signal scores | `skill/signal-scores.md` |
-| Killing obvious framings | `skill/framing-reject.md` |
+| Obvious vs non-obvious framings | `skill/framing-reject.md` |
 | One-sentence problems and report format | `skill/sharpen.md` |
 | Skip attempts, buyer-only, empty pain, after-report lock | `skill/edge-cases.md` |
 | Market-woman live example | `skill/worked-example.md` |
@@ -45,6 +48,7 @@ This configuration turns the agent into a problem-discovery specialist. It is fo
 
 | Command | Purpose |
 |---|---|
+| `/route` | Classify the prompt and load only the files that path needs |
 | `/problem-sprint` | Run the full intake-to-sharpened-problem workflow |
 | `/map-workaround` | Map current workarounds and flag empty pain |
 | `/reject-framing` | Score and reject obvious, feel-safe framings |

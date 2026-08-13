@@ -21,14 +21,19 @@ Capture these before scoring:
 
 If a field is blank and cannot be safely inferred, ask or state the assumption. Do not invent a worker or a workaround.
 
-## Route By Task
+## Router
 
-- Full discovery run: read [problem-workflow.md](problem-workflow.md) **and** [sharpen.md](sharpen.md). The report template is required.
-- Skip attempts, buyer-only personas, empty pain, bundles, implied solutions, after-report follow-ups: read [edge-cases.md](edge-cases.md) first
-- Current behavior and workarounds: read [workaround-map.md](workaround-map.md)
-- Signal scoring: read [signal-scores.md](signal-scores.md)
-- Obvious-framing rejection: read [framing-reject.md](framing-reject.md)
-- Market-woman live example: read [worked-example.md](worked-example.md)
+Read [router.md](router.md) first. It picks the smallest file set for this request.
+
+- About the skill / which files / how to apply: stay on [router.md](router.md) and this file
+- Full discovery run: [problem-workflow.md](problem-workflow.md) **and** [sharpen.md](sharpen.md). The report template is required.
+- Skip attempts, buyer-only, empty pain, bundles, implied solutions, after-report: [edge-cases.md](edge-cases.md) first
+- Current behavior: [workaround-map.md](workaround-map.md)
+- Signal scoring: [signal-scores.md](signal-scores.md)
+- Obvious vs non-obvious, before any solution: [framing-reject.md](framing-reject.md) and [signal-scores.md](signal-scores.md)
+- Market-woman live example: [worked-example.md](worked-example.md)
+
+Do not load every module. Do not solution until the router path has a report.
 
 ## Core Workflow
 

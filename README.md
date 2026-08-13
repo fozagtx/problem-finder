@@ -90,6 +90,7 @@ problem-finder/
 |-- install-custom.sh
 |-- skill/
 |   |-- SKILL.md
+|   |-- router.md
 |   |-- problem-workflow.md
 |   |-- workaround-map.md
 |   |-- signal-scores.md
@@ -116,7 +117,8 @@ problem-finder/
 |   |-- map-workaround.md
 |   |-- reject-framing.md
 |   |-- skill-demo.md
-|   `-- check-edges.md
+|   |-- check-edges.md
+|   `-- route.md
 |-- rules/
 |   `-- no-solutioning.md
 `-- tests/
@@ -126,8 +128,11 @@ problem-finder/
 
 ## Skill Routing
 
-`skill/SKILL.md` is the entry point. It classifies the task and routes to the smallest relevant module:
+Read `skill/router.md` first. It classifies the request (about the skill vs apply it vs skip attempt vs implementation) and names the smallest file set. Obvious vs non-obvious happens before any solution.
 
+`skill/SKILL.md` is the entry point. Modules:
+
+- `router.md` for path selection and the obvious / non-obvious gate
 - `problem-workflow.md` for intake, worker restatement, scoring, and the stop rule
 - `workaround-map.md` for current behavior, cost, and suspect-problem flags
 - `signal-scores.md` for fragmentation, incentives, incumbent neglect, and cost bearer

@@ -42,8 +42,16 @@ if ! grep -q 'edge-cases.md' "$ROOT_DIR/skill/SKILL.md"; then
   fail "SKILL.md does not link edge-cases.md"
 fi
 
+if ! grep -q 'router.md' "$ROOT_DIR/skill/SKILL.md"; then
+  fail "SKILL.md does not link router.md"
+fi
+
 if ! grep -q 'The report template is required' "$ROOT_DIR/skill/SKILL.md"; then
   fail "SKILL.md must say the report template is required."
+fi
+
+if ! grep -q 'obvious' "$ROOT_DIR/skill/router.md" || ! grep -q 'non-obvious' "$ROOT_DIR/skill/router.md"; then
+  fail "router.md must classify obvious vs non-obvious before solutions."
 fi
 
 for q in \
@@ -173,6 +181,7 @@ zip_list="$(unzip -Z1 "$pkg_dir/problem-finder.skill")"
 rm -rf "$pkg_dir"
 for needed in \
   "problem-finder/SKILL.md" \
+  "problem-finder/router.md" \
   "problem-finder/problem-workflow.md" \
   "problem-finder/workaround-map.md" \
   "problem-finder/signal-scores.md" \
