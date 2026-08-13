@@ -125,6 +125,10 @@ The skill should make an agent:
 - Score the four signals before writing a problem sentence
 - Produce 2-3 ranked problems that each name worker, workaround, and structural gap
 
+## Board
+
+Work is tracked on [issue #11](https://github.com/fozagtx/problem-finder/issues/11). Columns are labels: `done`, `ready`, `backlog`.
+
 ## Validation
 
 Run the structure validator:
