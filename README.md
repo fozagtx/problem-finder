@@ -27,6 +27,10 @@ This skill is designed for idea work where being able to pitch is not enough. It
 
 ## Installation
 
+### GitHub Release
+
+A `problem-finder.skill` zip is attached to [GitHub Releases](https://github.com/fozagtx/problem-finder/releases). Layout is `problem-finder/SKILL.md` plus the sibling modules (`edge-cases.md` included). Rebuild it with `./scripts/package_skill.sh`.
+
 Clone elsewhere → install into a skills dir. Never install onto the clone.
 
 This repository is a skill kit, not the installed skill. Clone it to a working directory, then run an installer so it copies `skill/` into a skills directory such as `~/.agents/skills/problem-finder` or `~/.claude/skills/problem-finder`. Do not clone this repo into a skills path and then install onto that same path — `install-custom.sh` option 2 would copy `skill/` over the git repo and can eat it. The custom installer refuses if the target looks like this clone (has `.git` and `install.sh`).
@@ -94,9 +98,14 @@ problem-finder/
 |   |-- worked-example.md
 |   `-- edge-cases.md
 |-- evals/
+|   |-- canonical-market-woman.md
 |   |-- edge-cases.json
 |   |-- ai-for-x.json
-|   `-- triggers.json
+|   |-- triggers.json
+|   |-- results.md
+|   `-- trigger-results.md
+|-- scripts/
+|   `-- package_skill.sh
 |-- agents/
 |   |-- problem-analyst.md
 |   |-- workaround-mapper.md
@@ -124,7 +133,7 @@ problem-finder/
 - `signal-scores.md` for fragmentation, incentives, incumbent neglect, and cost bearer
 - `framing-reject.md` for killing delivery, education, marketplace, dashboard, and "AI for X" framings
 - `sharpen.md` for the one-sentence contract and the report format
-- `worked-example.md` for the market-woman live example
+- `worked-example.md` for the market-woman live example (expected report: `evals/canonical-market-woman.md`)
 - `edge-cases.md` for skip attempts, buyer-only personas, empty pain, bundles, and after-report lock
 
 ## Quality Bar
@@ -153,7 +162,7 @@ Run the structure validator:
 ./tests/validate_structure.sh
 ```
 
-It checks required files, frontmatter, relative skill links, the six report headings, shell syntax, attribution hygiene, and the edge-case eval suites (`./tests/validate_edge_cases.sh`).
+It checks required files, frontmatter, relative skill links, the six report headings, the frozen market-woman report, the `.skill` zip layout, shell syntax, attribution hygiene, and the edge-case eval suites (`./tests/validate_edge_cases.sh`).
 
 ## License
 

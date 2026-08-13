@@ -54,4 +54,6 @@ If a field is blank and cannot be safely inferred, ask or state the assumption. 
 - Do not talk to the software buyer when the pain sits with the person doing the job.
 - Do not accept the first framing.
 - Do not re-bundle rejected framings after sharpening.
-- Do not run this skill on pure implementation (bugfix, types, CSS, refactor).
+- Do not run this skill on pure implementation (bugfix, types, CSS, refactor, git, pagination, translate-the-docs).
+- Already-sharpened plus "implement it" is implementation. Do not redo discovery as a pitch.
+- Crypto-idea search ("what should I build in crypto", idea bank, DeFi vs DePIN) belongs to find-next-crypto-idea. Do not steal that run.

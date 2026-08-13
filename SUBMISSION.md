@@ -75,4 +75,4 @@ The bundled example researches this framing:
 
 > A market woman loses money to spoilage, price hurdles, and transportation.
 
-See [ARTICLE.md](ARTICLE.md) and [skill/worked-example.md](skill/worked-example.md).
+See [evals/canonical-market-woman.md](evals/canonical-market-woman.md). ARTICLE.md, skill/worked-example.md, and /skill-demo point at that file.
