@@ -28,6 +28,13 @@ case "$selection" in
   *) echo "Unknown selection: $selection" >&2; exit 1 ;;
 esac
 
+if [[ -e "$TARGET_DIR/.git" && -f "$TARGET_DIR/install.sh" ]]; then
+  echo "Refusing to install onto the git clone at $TARGET_DIR." >&2
+  echo "Clone the repo elsewhere, then install into a skills directory." >&2
+  echo "Never install onto the clone." >&2
+  exit 1
+fi
+
 mkdir -p "$TARGET_DIR"
 cp -R "$SOURCE_DIR/skill/." "$TARGET_DIR/"
 
