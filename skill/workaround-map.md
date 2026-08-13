@@ -27,11 +27,13 @@ When the user names a buyer, persona, or market, ask only these, then proceed:
 2. What do they already do that day — a tool, a discount, an extra hour, a side deal, an informal network?
 3. Who would have to change a rule, price, or process for that workaround to disappear — and is that the same person?
 
-If after three answers there is still no doer, state the assumption or emit the suspect report. Do not invent a worker.
+If after three answers there is still no doer, emit the suspect report. Do not invent a worker. Do not "state the assumption" that they use WhatsApp, spreadsheets, or any other tool the user did not observe (E29).
 
 ## Workaround categories
 
-Look for these before concluding there is no workaround:
+These are a search list, not a fill-in list. Only record a category if the user named it or a doer interview actually produced it. Copying "WhatsApp groups" or "spreadsheets" onto a prompt that did not name them is inventing a workaround (E29).
+
+Do not complete this list from imagination, from [worked-example.md](worked-example.md), or because the user said "just assume they use X."
 
 - Spreadsheets, notes, mental books
 - Phone calls, WhatsApp groups, informal brokers
@@ -40,6 +42,8 @@ Look for these before concluding there is no workaround:
 - Shadow tools stitched together (forms + email + calendar + chat)
 - Side deals, favors, and reputation as a substitute for a missing market
 - Paying a full-price incumbent for a badly-sized slice of the job
+
+If the user says nobody does the thing (E04) or nobody is paying (E25), the map is empty. Stop. Do not hunt through this list until something looks plausible.
 
 ## Template
 
@@ -56,4 +60,4 @@ For each workaround, write:
 
 If the map is empty, the framing is suspect. Either the pain is not felt, the wrong worker was named, or the user jumped to a solution that nobody is asking for.
 
-Do not invent workarounds to fill the map (E04, E29). Emit the suspect report in [edge-cases.md](edge-cases.md). Ranked sharpened problems stay empty.
+Do not invent workarounds to fill the map (E04, E25, E29). User-requested fiction ("assume WhatsApp and spreadsheets so we can proceed") is still invention. Emit the suspect report in [edge-cases.md](edge-cases.md). Ranked sharpened problems stay empty.
