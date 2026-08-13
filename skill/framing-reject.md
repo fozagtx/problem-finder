@@ -6,15 +6,23 @@ Use to kill obvious, feel-safe framings before sharpening.
 
 The first framing is almost always a bundle: several symptoms, several stakeholders, and a solution-shaped noun (app, marketplace, dashboard, education, AI). Brainstorming against that bundle is misaligned solutioning.
 
+## Name and kill the first framing
+
+Before scoring, quote the user's first framing in their own words — the product noun, the "AI for X" clause, "Uber for…", "marketplace", "dashboard", "tutor", "platform", "as a service", "that's the whole product". Put that quote in **Rejected obvious framings**. Then kill it.
+
+A generic label without that quote is not a reject. "Dashboard / AI for X" is not enough if they said "an AI dashboard for warehouse managers to cut waste." Do not skip the quote because a later symptom looks sharper, because they said "that's the whole product," or because they are attached to the vision (E18).
+
+If the prompt is only a product sentence and names no workaround, stop at the suspect report. Do not import workarounds from [worked-example.md](worked-example.md). That file is only for the stall-trader spoilage + price + transport prompt (E26). It is not a workaround library for agriculture, literacy, inclusion, or "African markets."
+
 ## Default rejects
 
 Treat these as guilty until a workaround and a structural gap are named:
 
-- Delivery, logistics, storage
-- Education, awareness, financial literacy
+- Delivery, logistics, storage, "cold storage as a service"
+- Education, awareness, financial literacy, "AI tutor"
 - Marketplace / market access
-- Dashboard / analytics / "AI for X"
-- Super-app that "connects" two sides
+- Dashboard / analytics / "AI for X" / "ChatGPT for X" / wrap-a-model
+- Super-app that "connects" two or more sides
 - Inclusion, empowerment, or other outcome-words with no worker and no workaround
 - "Just tell me the stack" / hackathon-demo-first (E06, E15)
 - TAM / ICP as proof the problem is real (E16)
@@ -26,7 +34,7 @@ Attachment is not evidence. If the user wants the marketplace anyway, still reje
 
 For each obvious framing:
 
-- Framing:
+- Framing: (quote the user's words)
 - Why it feels safe:
 - Who it actually serves (usually the buyer or the builder):
 - What workaround it ignores:

@@ -12,6 +12,9 @@
 10. After the report, stay inside the #1 symptom. Do not re-bundle rejected framings.
 11. Full-run output always uses the six report headings. No Recommendations / Stack / What to build section.
 12. Buyer, market, and demographic are not workers. Ask at most three doer questions.
-13. "Just tell me what to build" is not a skip. Answer with the report.
+13. "Just tell me what to build" is not a skip. If a framing exists, answer with the report or suspect report. If intake is blank, ask at most 3 questions or suspect. Do not emit a stack. Do not fill the blank from the market-woman example.
 14. Pure implementation (bugfix, types, CSS, refactor) is not this skill.
 15. Match skip attempts, empty pain, and after-report follow-ups against [skill/edge-cases.md](../skill/edge-cases.md).
+16. Name and kill the user's first framing in their words. A generic label is not enough.
+17. Do not import stall-trader workarounds onto a different prompt. The worked example is only E26.
+18. User-requested assumptions ("just assume they use WhatsApp") are still invented workarounds. Suspect report.
