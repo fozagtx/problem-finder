@@ -10,7 +10,7 @@ That sentence invites delivery, storage, education, and market-access brainstorm
 
 ## Who does the work
 
-The stall trader herself. She buys at farmgate or wholesale, hauls goods, prices them, and sits the stall. Not "the market," not farmers, not an NGO buyer.
+The stall trader herself. She buys at farmgate or wholesale, hauls goods, prices them, and sits the stall. Farmers, NGOs, and "the market" are other people.
 
 ## Current workarounds
 

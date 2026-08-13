@@ -10,7 +10,7 @@ Each sharpened problem is one sentence and must name all three:
 2. **Workaround** — what they do today
 3. **Structural gap** — why this stays unfixed (incumbent incentive, ticket size, split ownership, org boundary)
 
-If any of the three is missing, it is still a pitch, not a problem.
+If any of the three is missing, rewrite. The sentence is still a pitch.
 
 ## Ranking
 
