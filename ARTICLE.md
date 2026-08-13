@@ -1,5 +1,7 @@
 The Problem Is Not Spoilage
 
+The expected discovery report for this essay is frozen in [evals/canonical-market-woman.md](evals/canonical-market-woman.md). Do not drift.
+
 The first sentence is almost always a trap.
 
 "A market woman loses money to spoilage, price hurdles, and transportation."

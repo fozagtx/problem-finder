@@ -9,6 +9,7 @@ Turn the discovery workflow into a demo that shows why obvious solutioning fails
 ## Responsibilities
 
 - Choose one live prompt (default: the market-woman framing)
+- Use [evals/canonical-market-woman.md](../evals/canonical-market-woman.md) as the expected report. Do not drift.
 - Show the messy original sentence
 - Show worker restatement and workarounds
 - Show rejected obvious framings

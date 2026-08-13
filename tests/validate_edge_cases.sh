@@ -98,6 +98,71 @@ if [[ -n "$missing_ids" ]]; then
   fail "$missing_ids"
 fi
 
+canon_check="$(python3 - <<'PY' "$ROOT_DIR"
+import re, sys
+from pathlib import Path
+root = Path(sys.argv[1])
+canon = (root / "evals/canonical-market-woman.md").read_text()
+ranked = re.findall(r"^\d+\.\s+(.+)$", canon, re.M)
+if len(ranked) != 3:
+    print("canonical-market-woman.md must contain exactly 3 ranked sentences")
+    raise SystemExit
+files = [
+    root / "evals/canonical-market-woman.md",
+    root / "ARTICLE.md",
+    root / "skill/worked-example.md",
+    root / "SUBMISSION.md",
+    root / "commands/skill-demo.md",
+]
+for path in files:
+    text = path.read_text()
+    if "evals/canonical-market-woman.md" not in text and path.name != "canonical-market-woman.md":
+        print(f"{path.relative_to(root)} must point at evals/canonical-market-woman.md")
+    if path.name in {"skill-demo.md", "SUBMISSION.md"}:
+        continue
+    for sentence in ranked:
+        if sentence not in text:
+            print(f"{path.relative_to(root)} missing ranked sentence: {sentence}")
+desc = ""
+for line in (root / "skill/SKILL.md").read_text().splitlines():
+    if line.startswith("description:"):
+        desc = line.split(":", 1)[1].strip()
+        break
+if len(desc) > 1024:
+    print(f"skill/SKILL.md description is {len(desc)} characters; must stay under 1024")
+if "Use when" not in desc:
+    print("skill/SKILL.md description must stay actionable")
+skill = (root / "skill/SKILL.md").read_text()
+if "find-next-crypto-idea" not in skill:
+    print("skill/SKILL.md must hand crypto-idea search to find-next-crypto-idea")
+if "pure implementation" not in skill.lower():
+    print("skill/SKILL.md must refuse pure implementation")
+PY
+)"
+
+if [[ -n "$canon_check" ]]; then
+  fail "$canon_check"
+fi
+
+pkg_dir="$(mktemp -d)"
+bash "$ROOT_DIR/scripts/package_skill.sh" "$pkg_dir" >/dev/null
+zip_list="$(unzip -Z1 "$pkg_dir/problem-finder.skill")"
+rm -rf "$pkg_dir"
+for needed in \
+  "problem-finder/SKILL.md" \
+  "problem-finder/problem-workflow.md" \
+  "problem-finder/workaround-map.md" \
+  "problem-finder/signal-scores.md" \
+  "problem-finder/framing-reject.md" \
+  "problem-finder/sharpen.md" \
+  "problem-finder/worked-example.md" \
+  "problem-finder/edge-cases.md"
+do
+  if ! grep -qxF "$needed" <<<"$zip_list"; then
+    fail "problem-finder.skill missing $needed"
+  fi
+done
+
 if (( FAIL != 0 )); then
   echo "Edge-case validation failed." >&2
   exit 1

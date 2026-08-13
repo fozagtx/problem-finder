@@ -20,9 +20,13 @@ required_files=(
   "skill/sharpen.md"
   "skill/worked-example.md"
   "skill/edge-cases.md"
+  "evals/canonical-market-woman.md"
   "evals/edge-cases.json"
   "evals/ai-for-x.json"
   "evals/triggers.json"
+  "evals/results.md"
+  "evals/trigger-results.md"
+  "scripts/package_skill.sh"
   "commands/check-edges.md"
   "agents/problem-analyst.md"
   "agents/workaround-mapper.md"
@@ -77,6 +81,7 @@ done
 
 bash -n "$ROOT_DIR/install.sh"
 bash -n "$ROOT_DIR/install-custom.sh"
+bash -n "$ROOT_DIR/scripts/package_skill.sh"
 bash -n "$ROOT_DIR/tests/validate_structure.sh"
 bash -n "$ROOT_DIR/tests/validate_edge_cases.sh"
 
@@ -87,6 +92,11 @@ fi
 
 if ! grep -q 'TARGET_DIR/.git' "$ROOT_DIR/install-custom.sh" || ! grep -q 'TARGET_DIR/install.sh' "$ROOT_DIR/install-custom.sh"; then
   echo "install-custom.sh must refuse if TARGET_DIR has .git and install.sh." >&2
+  exit 1
+fi
+
+if ! grep -q 'GitHub Releases' "$ROOT_DIR/README.md" || ! grep -q 'problem-finder.skill' "$ROOT_DIR/README.md"; then
+  echo "README Installation must mention the GitHub Release download of problem-finder.skill." >&2
   exit 1
 fi
 

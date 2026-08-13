@@ -1,6 +1,6 @@
 # Worked Example
 
-Live example for demos and routing checks.
+Live example for demos and routing checks. The expected report is frozen in [evals/canonical-market-woman.md](../evals/canonical-market-woman.md). Do not drift from that file. Do not invent a second example.
 
 ## Original framing
 
