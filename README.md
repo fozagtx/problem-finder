@@ -57,6 +57,41 @@ Standard defaults:
 - Skill location: `~/.agents/skills/problem-finder`
 - Optional config copied to: `~/.agents/AGENTS.md`
 
+## Getting started
+
+1. Clone this repo to a working directory. Install into a skills dir. Never install onto the clone.
+
+```bash
+git clone https://github.com/fozagtx/problem-finder.git
+cd problem-finder
+./install-custom.sh
+```
+
+Pick `~/.agents/skills/problem-finder`, `~/.claude/skills/problem-finder`, or a project `skills/` folder. Or download `problem-finder.skill` from [Releases](https://github.com/fozagtx/problem-finder/releases) and unpack it into a skills directory.
+
+2. Open a new agent chat (Claude Code, Cursor, or any harness that loads local skills). The skill triggers on startup ideas, hackathon ideas, "what should I build," validate-this, and a solution with no problem.
+
+3. Paste one messy prompt. Start here if you want the live demo:
+
+```text
+A market woman loses money to spoilage, price hurdles, and transportation. What should we build?
+```
+
+4. Expect a discovery report first: original framing, who does the work, workarounds, scores, rejected obvious framings, ranked problems. The agent reads `skill/router.md`, then only the files that path needs. It sorts obvious vs non-obvious before any build advice.
+
+5. If the first framing is a buyer ("restaurant owners"), a stack skip, or empty pain, it should interview the doer or emit a suspect report. It should not invent workarounds or jump to a product.
+
+Useful commands once the skill is loaded:
+
+| Command | What it does |
+|---|---|
+| `/route` | Classify the prompt and name the files to read |
+| `/problem-sprint` | Full run to the six-heading report |
+| `/skill-demo` | Walk the frozen market-woman example |
+| `/check-edges` | Match skip / buyer-only / empty-pain cases |
+
+After the report, "ok, what should we build?" stays inside ranked problem #1.
+
 ## Usage Examples
 
 ```text
