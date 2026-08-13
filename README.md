@@ -1,39 +1,75 @@
 # Problem Finder
 
-An AI agent skill for builders who need to turn a messy startup idea, hackathon prompt, or "what should I build" question into a worker-backed problem before anyone starts solutioning.
+Force a problem-discovery pass on startup and hackathon ideas before anyone starts solutioning.
 
-It forces worker identification, workaround mapping, signal scoring, obvious-framing rejection, and one-sentence problem synthesis.
+## What is it?
 
-## What It Helps With
+Problem Finder is an agent skill kit. The installable skill lives in `skill/`. The rest of the repo is the kit around it.
 
-| Area | Outcome |
-|---|---|
-| Problem restatement | Rewrite the idea from the person doing the work |
-| Workaround mapping | List what people already do today; flag framings with no felt pain |
-| Signal scoring | Score fragmentation, incentive misalignment, incumbent neglect, and who bears the cost |
-| Framing rejection | Kill obvious, feel-safe, razor-thin problems by default |
-| Problem sharpening | Output 2-3 ranked one-sentence problems naming worker, workaround, and structural gap |
-| Hackathon intake | Stop "AI for X" and marketplace brainstorms before they become the demo |
-| Edge-case lock | Buyer-only personas, empty pain, skip-to-stack, and after-report rebundles cannot bypass the report |
-| Method demo | Show the discovery pass working on a live prompt, using the market-woman example |
+- **Router** (`skill/router.md`) classifies the request and names the files to read. It is required on every run.
+- **Workflow** (`skill/problem-workflow.md`) restates the job from the person doing the work. It is required for a full apply.
+- **Workaround map** (`skill/workaround-map.md`) lists what they already do today. Empty map means suspect. It is required for a full apply.
+- **Framing reject + scores** (`skill/framing-reject.md`, `skill/signal-scores.md`) sort obvious vs non-obvious before any build. They are required for a full apply.
+- **Sharpen** (`skill/sharpen.md`) emits the six-heading report. It is required for a full apply.
+- **Edge cases** (`skill/edge-cases.md`) handles skip-to-stack, buyer-only personas, empty pain, and after-report lock. Load it when those fire.
+- **Worked example** (`skill/worked-example.md`) is the frozen market-woman demo. Load it only for that prompt.
+
+Agents, commands, rules, installers, and evals ship with the kit. They are optional once the skill files are installed.
+
+The agent remains in charge. The router picks a path; the report is the stop condition; a product list is not a legal first output.
 
 ## How it works
 
-- A pitch cannot become a build until the worker, workaround, and structural gap are explicit.
-- Built for people who solution by reflex. Discovery runs first.
-- `skill/SKILL.md` routes to focused files only when needed.
-- Install scripts copy local Markdown files into a selected skills directory.
-- The repo includes agents, commands, rules, validation, and a live worked example.
+```text
+USER PROMPT
+     |
+     v
+ skill/router.md
+     |
+     +-- implementation / crypto-idea search -----> leave this skill
+     +-- "how does this skill work?" -------------> explain files
+     +-- skip / buyer / empty pain ---------------> edge-cases.md
+     +-- market-woman demo -----------------------> worked-example.md
+     +-- apply / "is this obvious?"
+            |
+            v
+     obvious vs non-obvious
+     (framing-reject + signal-scores)
+            |
+            +-- obvious -----> reject line, no build
+            +-- empty map ---> suspect report
+            +-- non-obvious -> workaround-map
+                                  |
+                                  v
+                           problem-workflow
+                                  |
+                                  v
+                              sharpen.md
+                         six-heading report
+                                  |
+                                  v
+                    "what should we build?"
+                         stays inside #1
+```
 
-## Installation
+Stop when the six headings exist (or the suspect variant). Max 3 doer questions before classifying again. Do not invent workarounds. Do not load every module.
 
-### GitHub Release
+## Why use it?
 
-A `problem-finder.skill` zip is attached to [GitHub Releases](https://github.com/fozagtx/problem-finder/releases). Layout is `problem-finder/SKILL.md` plus the sibling modules (`edge-cases.md` included). Rebuild it with `./scripts/package_skill.sh`.
+- Turns "what should I build" into a worker, a workaround, and a structural gap
+- Names and kills obvious framings (delivery, education, marketplace, dashboard, AI for X) before a stack appears
+- Routes each request to the smallest file set via `skill/router.md`
+- Fails closed on skip attempts, buyer-only personas, and empty pain
+
+Results depend on the model following the skill. The report headings are the contract. There is no guaranteed live-eval score for a given chat.
+
+## Install
 
 Clone elsewhere → install into a skills dir. Never install onto the clone.
 
-This repository is the skill kit. The installed skill is a copy of `skill/` in a skills directory such as `~/.agents/skills/problem-finder` or `~/.claude/skills/problem-finder`. Clone it to a working directory, then run an installer. Do not clone this repo into a skills path and then install onto that same path. `install-custom.sh` option 2 would copy `skill/` over the git repo and can eat it. The custom installer refuses if the target looks like this clone (has `.git` and `install.sh`).
+This repository is the skill kit. The installed skill is a copy of `skill/` in a skills directory. Do not clone this repo into a skills path and then install onto that same path. `install-custom.sh` option 2 would copy `skill/` over the git repo and can eat it. The custom installer refuses if the target looks like this clone (has `.git` and `install.sh`).
+
+Requires bash. No network calls in the installers.
 
 ### Recommended
 
@@ -43,7 +79,7 @@ cd problem-finder
 ./install-custom.sh
 ```
 
-The custom installer lets you choose personal or project skill locations, including `.agents/skills`, `.claude/skills`, and a local project `skills/` folder. Pick a skills directory. Never point it at the clone.
+Pick `~/.agents/skills/problem-finder`, `~/.claude/skills/problem-finder`, or a project `skills/` folder.
 
 ### Standard
 
@@ -52,14 +88,17 @@ The custom installer lets you choose personal or project skill locations, includ
 ./install.sh -y
 ```
 
-Standard defaults:
+Defaults: skill at `~/.agents/skills/problem-finder`. Standard install also copies `CLAUDE.md` onto `~/.agents/AGENTS.md`.
 
-- Skill location: `~/.agents/skills/problem-finder`
-- Optional config copied to: `~/.agents/AGENTS.md`
+### GitHub Release
 
-## Getting started
+A `problem-finder.skill` zip is attached to [GitHub Releases](https://github.com/fozagtx/problem-finder/releases). Layout is `problem-finder/SKILL.md` plus the sibling modules (`router.md` and `edge-cases.md` included). Rebuild it with `./scripts/package_skill.sh`. Unpack into a skills directory.
 
-1. Clone this repo to a working directory. Install into a skills dir. Never install onto the clone.
+Start a new agent chat after installation so the skill can load.
+
+## Quick start
+
+Recommended: install, then paste a messy idea.
 
 ```bash
 git clone https://github.com/fozagtx/problem-finder.git
@@ -67,142 +106,123 @@ cd problem-finder
 ./install-custom.sh
 ```
 
-Pick `~/.agents/skills/problem-finder`, `~/.claude/skills/problem-finder`, or a project `skills/` folder. Or download `problem-finder.skill` from [Releases](https://github.com/fozagtx/problem-finder/releases) and unpack it into a skills directory.
-
-2. Open a new agent chat (Claude Code, Cursor, or any harness that loads local skills). The skill triggers on startup ideas, hackathon ideas, "what should I build," validate-this, and a solution with no problem.
-
-3. Paste one messy prompt. Start here if you want the live demo:
-
 ```text
 A market woman loses money to spoilage, price hurdles, and transportation. What should we build?
 ```
 
-4. Expect a discovery report first: original framing, who does the work, workarounds, scores, rejected obvious framings, ranked problems. The agent reads `skill/router.md`, then only the files that path needs. It sorts obvious vs non-obvious before any build advice.
+Expect the six-heading report (original framing, who does the work, workarounds, scores, rejected obvious framings, ranked problems). The expected demo report is frozen in `evals/canonical-market-woman.md`.
 
-5. If the first framing is a buyer ("restaurant owners"), a stack skip, or empty pain, it should interview the doer or emit a suspect report. It should not invent workarounds or jump to a product.
-
-Useful commands once the skill is loaded:
-
-| Command | What it does |
-|---|---|
-| `/route` | Classify the prompt and name the files to read |
-| `/problem-sprint` | Full run to the six-heading report |
-| `/skill-demo` | Walk the frozen market-woman example |
-| `/check-edges` | Match skip / buyer-only / empty-pain cases |
-
-After the report, "ok, what should we build?" stays inside ranked problem #1.
-
-## Usage Examples
+With the Release zip (omit the git clone):
 
 ```text
-Hackathon idea: an app that helps market women reduce spoilage.
+Download problem-finder.skill from GitHub Releases
+Unpack into ~/.claude/skills/ or ~/.agents/skills/
+Start a new chat and paste the market-woman prompt
 ```
+
+Minimal install (omit the custom picker):
+
+```bash
+./install.sh -y
+```
+
+Buyer-only first prompt (doer interview, no stack):
 
 ```text
 What should I build for small restaurant owners?
 ```
 
+After setup, start another new chat and use the skill normally. It triggers on startup ideas, hackathon ideas, "what should I build," validate-this, and a solution with no problem.
+
+## Choose your path
+
+The router assigns one ID. If two match, it takes the earlier ID.
+
 ```text
-We're building an AI dashboard for warehouse managers to cut waste. Is this a real problem?
+R0  implementation work          -> leave
+R1  crypto idea bank             -> find-next-crypto-idea
+R2  how the skill works          -> router.md + SKILL.md
+R3  skip / buyer / empty pain    -> edge-cases.md first
+R4  market-woman demo            -> worked-example.md
+R5  apply the skill              -> reject + scores + map + workflow + sharpen
+R6  workarounds only             -> workaround-map.md
+R7  "is this obvious?"           -> framing-reject.md + signal-scores.md
+```
+
+- Omit the worked example unless the prompt is stall-trader spoilage + price + transport.
+- Omit workflow + sharpen on R2 (about the skill) unless they also asked for a run.
+- Sharpen is required for a full apply (R5).
+- Path labels are literal. Do not remap them.
+
+You can also ask naturally:
+
+```text
+How does this skill work? Which files should you read?
 ```
 
 ```text
-A market woman loses money to spoilage, price hurdles, and transportation. What should we build?
+/route
 ```
 
-## Repository Structure
+## Useful commands
 
 ```text
-problem-finder/
-|-- .gitignore
-|-- ARTICLE.md
-|-- README.md
-|-- LICENSE
-|-- CLAUDE.md
-|-- SUBMISSION.md
-|-- SKILL.md
-|-- install.sh
-|-- install-custom.sh
-|-- skill/
-|   |-- SKILL.md
-|   |-- router.md
-|   |-- problem-workflow.md
-|   |-- workaround-map.md
-|   |-- signal-scores.md
-|   |-- framing-reject.md
-|   |-- sharpen.md
-|   |-- worked-example.md
-|   `-- edge-cases.md
-|-- evals/
-|   |-- canonical-market-woman.md
-|   |-- edge-cases.json
-|   |-- ai-for-x.json
-|   |-- triggers.json
-|   |-- results.md
-|   `-- trigger-results.md
-|-- scripts/
-|   `-- package_skill.sh
-|-- agents/
-|   |-- problem-analyst.md
-|   |-- workaround-mapper.md
-|   |-- framing-rejector.md
-|   `-- skill-demo-coach.md
-|-- commands/
-|   |-- problem-sprint.md
-|   |-- map-workaround.md
-|   |-- reject-framing.md
-|   |-- skill-demo.md
-|   |-- check-edges.md
-|   `-- route.md
-|-- rules/
-|   `-- no-solutioning.md
-`-- tests/
-    |-- validate_structure.sh
-    `-- validate_edge_cases.sh
+/route            Classify the prompt and name the files to read
+/problem-sprint   Full run to the six-heading report
+/map-workaround   Map current behavior; flag empty pain
+/reject-framing   Score and reject obvious framings
+/skill-demo       Walk the frozen market-woman example
+/check-edges      Match skip / buyer-only / empty-pain cases
 ```
-
-## Skill Routing
-
-Read `skill/router.md` first. It classifies the request (about the skill vs apply it vs skip attempt vs implementation) and names the smallest file set. Obvious vs non-obvious happens before any solution.
-
-`skill/SKILL.md` is the entry point. Modules:
-
-- `router.md` for path selection and the obvious / non-obvious gate
-- `problem-workflow.md` for intake, worker restatement, scoring, and the stop rule
-- `workaround-map.md` for current behavior, cost, and suspect-problem flags
-- `signal-scores.md` for fragmentation, incentives, incumbent neglect, and cost bearer
-- `framing-reject.md` for killing delivery, education, marketplace, dashboard, and "AI for X" framings
-- `sharpen.md` for the one-sentence contract and the report format
-- `worked-example.md` for the market-woman live example (expected report: `evals/canonical-market-woman.md`)
-- `edge-cases.md` for skip attempts, buyer-only personas, empty pain, bundles, and after-report lock
-
-## Quality Bar
-
-The skill should make an agent:
-
-- Preserve the messy original framing before cleaning it up
-- Name the person doing the work
-- Refuse to proceed when there is no current workaround
-- Reject obvious, feel-safe framings and say why
-- Score the four signals before writing a problem sentence
-- Produce 2-3 ranked problems that each name worker, workaround, and structural gap
-- Refuse buyer/market/demographic as the worker
-- Emit a suspect report. Do not invent workarounds
-- Stay inside sharpened #1 after the report exists
-
-## Board
-
-Work is tracked on [issue #11](https://github.com/fozagtx/problem-finder/issues/11). Columns are labels: `done`, `ready`, `backlog`.
-
-## Validation
-
-Run the structure validator:
 
 ```bash
 ./tests/validate_structure.sh
+./scripts/package_skill.sh
 ```
 
-It checks required files, frontmatter, relative skill links, the six report headings, the frozen market-woman report, the `.skill` zip layout, shell syntax, attribution hygiene, and the edge-case eval suites (`./tests/validate_edge_cases.sh`).
+## Important limits
+
+- The report exists before any product, stack, or feature list.
+- Obvious framings stay in **Rejected obvious framings**. They do not become the build.
+- Empty workaround map → suspect report. Ranked problems stay none.
+- Buyer, market, and demographic fail the worker gate. Ask at most 3 doer questions.
+- After the report, "what should we build?" stays inside ranked #1.
+- Pure implementation (bugfix, types, CSS, refactor, git) stays off this skill.
+- Crypto-idea search belongs to find-next-crypto-idea.
+- Standard `install.sh` copies `CLAUDE.md` → `~/.agents/AGENTS.md` on purpose (DMR default).
+- Never install onto the git clone.
+- One worked example. `skill/SKILL.md` stays under 200 lines.
+
+## Update
+
+In the clone:
+
+```bash
+git pull
+./install-custom.sh
+```
+
+That overwrites the installed `skill/` copy. Start a new chat after updating. Rebuild the zip with `./scripts/package_skill.sh` if you ship a Release.
+
+## Uninstall
+
+Remove the installed skill directory. Leave the git clone alone if you still want the kit.
+
+```bash
+rm -rf ~/.agents/skills/problem-finder
+rm -rf ~/.claude/skills/problem-finder
+```
+
+Standard install may have written `~/.agents/AGENTS.md`. Review that file yourself; uninstall does not revert it.
+
+## Development
+
+```bash
+./tests/validate_structure.sh
+./scripts/package_skill.sh
+```
+
+The validator checks required files, frontmatter, router links, the six report headings, the frozen market-woman report, the `.skill` zip layout, attribution hygiene, and eval suites.
 
 ## License
 
