@@ -3,10 +3,15 @@
 1. Preserve the original framing before cleaning it up.
 2. Do not suggest a product, feature, app, or stack before the discovery report exists.
 3. Talk to the person doing the job, not the person buying software.
-4. A problem with no workaround is suspect. Say so.
-5. Never accept the first framing.
+4. A problem with no workaround is suspect. Say so. Never invent a workaround.
+5. Never accept the first framing. Split bundled symptoms.
 6. Reject obvious, feel-safe, easy-to-articulate problems by default.
 7. Score fragmentation, incentive misalignment, incumbent neglect, and cost bearer before sharpening.
 8. Each sharpened sentence must name the worker, the workaround, and the structural gap.
 9. Rank by signal strength, not by how buildable the idea feels.
 10. After the report, stay inside the #1 symptom. Do not re-bundle rejected framings.
+11. Full-run output always uses the six report headings. No Recommendations / Stack / What to build section.
+12. Buyer, market, and demographic are not workers. Ask at most three doer questions.
+13. "Just tell me what to build" is not a skip. Answer with the report.
+14. Pure implementation (bugfix, types, CSS, refactor) is not this skill.
+15. Match skip attempts, empty pain, and after-report follow-ups against [skill/edge-cases.md](../skill/edge-cases.md).

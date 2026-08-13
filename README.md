@@ -14,6 +14,7 @@ This skill is designed for idea work where being able to pitch is not enough. It
 | Framing rejection | Kill obvious, feel-safe, razor-thin problems by default |
 | Problem sharpening | Output 2-3 ranked one-sentence problems naming worker, workaround, and structural gap |
 | Hackathon intake | Stop "AI for X" and marketplace brainstorms before they become the demo |
+| Edge-case lock | Buyer-only personas, empty pain, skip-to-stack, and after-report rebundles cannot bypass the report |
 | Method demo | Show the discovery pass working on a live prompt, using the market-woman example |
 
 ## What Makes This Different
@@ -86,7 +87,12 @@ problem-finder/
 |   |-- signal-scores.md
 |   |-- framing-reject.md
 |   |-- sharpen.md
-|   `-- worked-example.md
+|   |-- worked-example.md
+|   `-- edge-cases.md
+|-- evals/
+|   |-- edge-cases.json
+|   |-- ai-for-x.json
+|   `-- triggers.json
 |-- agents/
 |   |-- problem-analyst.md
 |   |-- workaround-mapper.md
@@ -96,11 +102,13 @@ problem-finder/
 |   |-- problem-sprint.md
 |   |-- map-workaround.md
 |   |-- reject-framing.md
-|   `-- skill-demo.md
+|   |-- skill-demo.md
+|   `-- check-edges.md
 |-- rules/
 |   `-- no-solutioning.md
 `-- tests/
-    `-- validate_structure.sh
+    |-- validate_structure.sh
+    `-- validate_edge_cases.sh
 ```
 
 ## Skill Routing
@@ -113,6 +121,7 @@ problem-finder/
 - `framing-reject.md` for killing delivery, education, marketplace, dashboard, and "AI for X" framings
 - `sharpen.md` for the one-sentence contract and the report format
 - `worked-example.md` for the market-woman live example
+- `edge-cases.md` for skip attempts, buyer-only personas, empty pain, bundles, and after-report lock
 
 ## Quality Bar
 
@@ -124,6 +133,9 @@ The skill should make an agent:
 - Reject obvious, feel-safe framings and say why
 - Score the four signals before writing a problem sentence
 - Produce 2-3 ranked problems that each name worker, workaround, and structural gap
+- Refuse buyer/market/demographic as the worker
+- Emit a suspect report instead of inventing workarounds
+- Stay inside sharpened #1 after the report exists
 
 ## Board
 
@@ -137,7 +149,7 @@ Run the structure validator:
 ./tests/validate_structure.sh
 ```
 
-It checks required files, frontmatter, relative skill links, shell syntax, and attribution hygiene.
+It checks required files, frontmatter, relative skill links, the six report headings, shell syntax, attribution hygiene, and the edge-case eval suites (`./tests/validate_edge_cases.sh`).
 
 ## License
 

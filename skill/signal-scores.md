@@ -16,8 +16,9 @@ Use for scoring whether a framing is a good problem or a feel-safe one.
 ## Reading the scores
 
 - Three or more signals at 4-5: proceed to sharpening.
-- Mixed 2-3s: the framing is probably still bundled. Split the symptom and rescore.
-- All 1-2s: reject as obvious / feel-safe. Say why.
+- Mixed 2-3s: the framing is probably still bundled. Split the symptom and rescore (E03, E23). Do not average.
+- All 1-2s: reject as obvious / feel-safe. Say why. Do not sharpen into a build (E22).
+- Incumbent neglect 1-2: incumbents are already racing. Do not invent a structural gap (E12).
 
 ## Do not score
 

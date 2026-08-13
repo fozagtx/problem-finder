@@ -10,8 +10,8 @@ Map what the worker does today. Flag the problem if nothing is being done.
 
 ## Steps
 
-1. Name the doer, not the buyer.
-2. List workarounds by category.
+1. Name the doer, not the buyer. If the prompt names owners, SMEs, or "the market", ask the three doer questions.
+2. List workarounds by category. Do not invent any.
 3. Attach a cost to each.
 4. Note who benefits from the mess.
 5. Flag empty maps as suspect.

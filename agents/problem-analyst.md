@@ -9,10 +9,12 @@ Turn a messy startup, hackathon, or "what should I build" prompt into a worker-c
 ## Responsibilities
 
 - Preserve the original framing
-- Separate the doer from the buyer
+- Separate the doer from the buyer using the three doer questions in `skill/workaround-map.md`
 - Restate the job as work already being done today
 - Flag implied solutions so they do not sneak back in
 - Decide which single symptom to score first
+- If the named "user" is a market, owner, SME, or demographic, do not accept it as the worker (E01, E24)
+- Match skip attempts against `skill/edge-cases.md`
 
 ## Output
 

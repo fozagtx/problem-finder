@@ -19,6 +19,11 @@ required_files=(
   "skill/framing-reject.md"
   "skill/sharpen.md"
   "skill/worked-example.md"
+  "skill/edge-cases.md"
+  "evals/edge-cases.json"
+  "evals/ai-for-x.json"
+  "evals/triggers.json"
+  "commands/check-edges.md"
   "agents/problem-analyst.md"
   "agents/workaround-mapper.md"
   "agents/framing-rejector.md"
@@ -29,6 +34,7 @@ required_files=(
   "commands/skill-demo.md"
   "rules/no-solutioning.md"
   "tests/validate_structure.sh"
+  "tests/validate_edge_cases.sh"
 )
 
 for file in "${required_files[@]}"; do
@@ -48,9 +54,23 @@ if ! grep -q '^description: .*Use when ' "$ROOT_DIR/skill/SKILL.md"; then
   exit 1
 fi
 
-for linked in problem-workflow.md workaround-map.md signal-scores.md framing-reject.md sharpen.md worked-example.md; do
+for linked in problem-workflow.md workaround-map.md signal-scores.md framing-reject.md sharpen.md worked-example.md edge-cases.md; do
   if ! grep -q "$linked" "$ROOT_DIR/skill/SKILL.md"; then
     echo "SKILL.md does not link $linked" >&2
+    exit 1
+  fi
+done
+
+for heading in \
+  "**Original framing:**" \
+  "**Who does the work:**" \
+  "**Current workarounds:**" \
+  "**Signal scores:**" \
+  "**Rejected obvious framings:**" \
+  "**Ranked sharpened problems:**"
+do
+  if ! grep -qF "$heading" "$ROOT_DIR/skill/sharpen.md"; then
+    echo "sharpen.md missing report heading: $heading" >&2
     exit 1
   fi
 done
@@ -58,6 +78,7 @@ done
 bash -n "$ROOT_DIR/install.sh"
 bash -n "$ROOT_DIR/install-custom.sh"
 bash -n "$ROOT_DIR/tests/validate_structure.sh"
+bash -n "$ROOT_DIR/tests/validate_edge_cases.sh"
 
 blocked_terms=(
   "$(printf "%s%s" "Co" "dex")"
@@ -73,5 +94,7 @@ for term in "${blocked_terms[@]}"; do
     exit 1
   fi
 done
+
+"$ROOT_DIR/tests/validate_edge_cases.sh"
 
 echo "Structure validation passed."

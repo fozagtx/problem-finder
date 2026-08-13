@@ -34,6 +34,7 @@ The repo follows a skill addon pattern:
 - README
 - MIT license
 - local structure validator
+- edge-case table and eval suites (skip attempts, buyer-only, empty pain, AI-for-X rejects)
 
 ## Safety
 

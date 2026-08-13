@@ -16,6 +16,11 @@ Treat these as guilty until a workaround and a structural gap are named:
 - Dashboard / analytics / "AI for X"
 - Super-app that "connects" two sides
 - Inclusion, empowerment, or other outcome-words with no worker and no workaround
+- "Just tell me the stack" / hackathon-demo-first (E06, E15)
+- TAM / ICP as proof the problem is real (E16)
+- Re-bundling rejected framings after the report (E07, E30)
+
+Attachment is not evidence. If the user wants the marketplace anyway, still reject it (E18).
 
 ## Rejection template
 
