@@ -14,7 +14,7 @@ Record:
 
 ## Step 1: Restate from the worker
 
-Name the person closest to the pain. Rewrite the problem as a job they are already trying to finish today — not a market, a demographic, or a buyer persona.
+Name the person closest to the pain. Rewrite the problem as a job they are already trying to finish today.
 
 Ask: who does the real work, with their hands on the mess, at the moment the cost shows up?
 
@@ -40,7 +40,7 @@ Name the feel-safe versions and say why they fail. See [framing-reject.md](frami
 
 Output 2-3 ranked one-sentence problem statements using the exact report headings in [sharpen.md](sharpen.md). Skipping the template is a failure. See E27 / E28.
 
-Rank by signal strength, not by how buildable a solution feels. If a sentence is missing worker, workaround, or structural gap, rewrite it (E20).
+Rank by signal strength. If a sentence is missing worker, workaround, or structural gap, rewrite it (E20).
 
 ## Stop rule
 

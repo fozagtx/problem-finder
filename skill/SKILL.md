@@ -23,7 +23,7 @@ If a field is blank and cannot be safely inferred, ask or state the assumption. 
 
 ## Route By Task
 
-- Full discovery run: read [problem-workflow.md](problem-workflow.md) **and** [sharpen.md](sharpen.md). The report template is not optional.
+- Full discovery run: read [problem-workflow.md](problem-workflow.md) **and** [sharpen.md](sharpen.md). The report template is required.
 - Skip attempts, buyer-only personas, empty pain, bundles, implied solutions, after-report follow-ups: read [edge-cases.md](edge-cases.md) first
 - Current behavior and workarounds: read [workaround-map.md](workaround-map.md)
 - Signal scoring: read [signal-scores.md](signal-scores.md)

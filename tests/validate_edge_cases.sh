@@ -42,8 +42,8 @@ if ! grep -q 'edge-cases.md' "$ROOT_DIR/skill/SKILL.md"; then
   fail "SKILL.md does not link edge-cases.md"
 fi
 
-if ! grep -q 'report template is not optional' "$ROOT_DIR/skill/SKILL.md"; then
-  fail "SKILL.md must say the report template is not optional."
+if ! grep -q 'The report template is required' "$ROOT_DIR/skill/SKILL.md"; then
+  fail "SKILL.md must say the report template is required."
 fi
 
 for q in \
@@ -137,6 +137,29 @@ if "find-next-crypto-idea" not in skill:
     print("skill/SKILL.md must hand crypto-idea search to find-next-crypto-idea")
 if "pure implementation" not in skill.lower():
     print("skill/SKILL.md must refuse pure implementation")
+banned = [
+    "They are not.",
+    "they are not.",
+    "is not the same as",
+    "It's not just",
+    "it's not just",
+    "failure mode is not",
+    "Obvious is not",
+    "It's not X",
+    "It is not ",
+]
+copy_files = [
+    root / "ARTICLE.md",
+    root / "README.md",
+    root / "SUBMISSION.md",
+    root / "CLAUDE.md",
+    root / "skill/SKILL.md",
+]
+for path in copy_files:
+    text = path.read_text()
+    for phrase in banned:
+        if phrase in text:
+            print(f"{path.relative_to(root)} still has contrast-slop: {phrase!r}")
 PY
 )"
 

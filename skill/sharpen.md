@@ -14,7 +14,7 @@ If any of the three is missing, rewrite. The sentence is still a pitch.
 
 ## Ranking
 
-Rank 2-3 sentences by signal strength, not by how buildable they feel.
+Rank 2-3 sentences by signal strength.
 
 Put the highest-scoring single symptom first. Do not re-bundle rejected framings to make a "platform."
 
@@ -34,7 +34,7 @@ Use this exact structure. Keep it short. No solution section. Every full run emi
 
 "Who does the work" must be a named doer. If it would otherwise say "users", "owners", or "the market", go back to the doer interview.
 
-If the workaround map is empty, use the suspect report in [edge-cases.md](edge-cases.md) instead of inventing ranked problems.
+If the workaround map is empty, use the suspect report in [edge-cases.md](edge-cases.md). Leave ranked problems empty.
 
 ## After the report
 

@@ -34,6 +34,6 @@ fragmentation 4/5 · incentive misalignment 5/5 · incumbent neglect 4/5 · cost
 
 1. The stall trader discounts unsold perishables each afternoon because she has no overnight hold that matches her lot size, and cold-chain operators only rent to wholesalers.
 2. She pays a full-load transporter fare for a half-load because aggregating with other traders would leak her supplier and price, and no incumbent will unbundle the fare.
-3. She absorbs farmgate-to-stall price swings in cash because the person who sets wholesale terms (the supplier) is not the person who sits the unsold stock (her).
+3. She absorbs farmgate-to-stall price swings in cash because the supplier sets wholesale terms while she sits the unsold stock.
 
 The useful move was decomposing which stakeholder bears which cost, what they already do, and which single symptom has a structural reason it stays unfixed.

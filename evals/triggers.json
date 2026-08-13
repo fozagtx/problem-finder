@@ -68,7 +68,7 @@
     {
       "id": "N05",
       "prompt": "What should I build in crypto? Search the idea bank and rank DeFi vs DePIN.",
-      "why": "crypto-idea search belongs to find-next-crypto-idea, not a generic problem-finder pitch"
+      "why": "crypto-idea search belongs to find-next-crypto-idea"
     },
     {
       "id": "N06",

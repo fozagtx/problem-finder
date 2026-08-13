@@ -8,22 +8,22 @@ A real problem already has messy workarounds. Building against a pain nobody is 
 
 ## Who to map
 
-Map the person **doing the job**, not the person who would buy software.
+Map the person **doing the job**. The buyer comes after the doer is named.
 
 | Role | Usually useful? | Caution |
 |---|---|---|
 | Doer / operator | Yes. Closest to the pain | May lack budget |
-| Buyer / sponsor | Only after the doer is clear | Often names a dashboard, not a job |
-| Beneficiary | Sometimes | May feel the outcome, not the work |
+| Buyer / sponsor | Only after the doer is clear | Often names a dashboard |
+| Beneficiary | Sometimes | May feel the outcome |
 | Incumbent vendor | For "why unfixed" | Will defend the current product |
 
-Not a worker: "users", "people", "the market", "SMEs", "restaurant owners", "millennials", "women in X", an NGO, a government, a TAM slide. Those are E01 / E09 / E17 / E24.
+These fail the worker gate: "users", "people", "the market", "SMEs", "restaurant owners", "millennials", "women in X", an NGO, a government, a TAM slide. Those are E01 / E09 / E17 / E24.
 
 ## Doer interview (at most 3)
 
 When the user names a buyer, persona, or market, ask only these, then proceed:
 
-1. Whose hands are on the mess at the moment the cost shows up? Name a role that does a job, not a market.
+1. Whose hands are on the mess at the moment the cost shows up? Name a role that does a job.
 2. What do they already do that day — a tool, a discount, an extra hour, a side deal, an informal network?
 3. Who would have to change a rule, price, or process for that workaround to disappear — and is that the same person?
 
@@ -58,6 +58,6 @@ For each workaround, write:
 
 ## Suspect-problem rule
 
-If the map is empty, the framing is suspect. Either the pain is not felt, the wrong worker was named, or the user jumped to a solution that nobody is asking for.
+If the map is empty, the framing is suspect. Either nobody feels the pain, the wrong worker was named, or the user jumped to a solution that nobody is asking for.
 
 Do not invent workarounds to fill the map (E04, E25, E29). User-requested fiction ("assume WhatsApp and spreadsheets so we can proceed") is still invention. Emit the suspect report in [edge-cases.md](edge-cases.md). Ranked sharpened problems stay empty.
