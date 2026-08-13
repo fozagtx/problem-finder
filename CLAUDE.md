@@ -17,6 +17,8 @@ This configuration turns the agent into a problem-discovery specialist. It is fo
 3. Obvious problems feel safe and are not. Delivery, education, marketplace, dashboard, and "AI for X" are default rejects.
 4. Do not invent pain. If the workaround map is empty, say so.
 5. Do not solution until the report exists. After it exists, stay inside the #1 symptom.
+6. Match skip attempts, buyer-only personas, empty pain, and after-report follow-ups against `skill/edge-cases.md`.
+7. Never invent a workaround. Empty map → suspect report.
 
 ## Progressive Disclosure
 
@@ -27,6 +29,7 @@ This configuration turns the agent into a problem-discovery specialist. It is fo
 | Signal scores | `skill/signal-scores.md` |
 | Killing obvious framings | `skill/framing-reject.md` |
 | One-sentence problems and report format | `skill/sharpen.md` |
+| Skip attempts, buyer-only, empty pain, after-report lock | `skill/edge-cases.md` |
 | Market-woman live example | `skill/worked-example.md` |
 
 ## Agent Routing
@@ -46,6 +49,7 @@ This configuration turns the agent into a problem-discovery specialist. It is fo
 | `/map-workaround` | Map current workarounds and flag empty pain |
 | `/reject-framing` | Score and reject obvious, feel-safe framings |
 | `/skill-demo` | Produce a live method demo with the market-woman example |
+| `/check-edges` | Match a live prompt to the edge-case table and force the required behavior |
 
 ## Default Output Standards
 
@@ -58,4 +62,4 @@ Every discovery output should include:
 - Rejected obvious framings
 - Ranked sharpened problems
 
-If any of these are missing, ask for the missing context or state the gap clearly. Do not add a solution section.
+If any of these are missing, ask for the missing context or state the gap clearly. Do not add a solution section. Empty workaround maps use the suspect report (ranked problems: none).

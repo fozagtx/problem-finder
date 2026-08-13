@@ -20,7 +20,7 @@ Put the highest-scoring single symptom first. Do not re-bundle rejected framings
 
 ## Report format
 
-Use this exact structure. Keep it short. No solution section.
+Use this exact structure. Keep it short. No solution section. Every full run emits these six headings, in this order. Skipping a heading is a failure (E27). Adding Recommendations / What to build / Stack is a failure (E28).
 
 **Original framing:** …
 **Who does the work:** …
@@ -32,6 +32,12 @@ Use this exact structure. Keep it short. No solution section.
 2. …
 3. …
 
+"Who does the work" must be a named doer. If it would otherwise say "users", "owners", or "the market", go back to the doer interview.
+
+If the workaround map is empty, use the suspect report in [edge-cases.md](edge-cases.md) instead of inventing ranked problems.
+
 ## After the report
 
-Only if the user asks what to build: stay inside the #1 sharpened problem and that single symptom. Do not reopen delivery, education, marketplace, or dashboard ideas that were already rejected.
+Only if the user asks what to build: stay inside the #1 sharpened problem and that single symptom.
+
+Handoff: name the #1 worker, workaround, and structural gap, then stop. Later skills (validate-idea, scaffold) may take that sentence. This skill does not reopen delivery, education, marketplace, dashboard, or "AI for X". Do not merge #1 with #2 and #3 into a platform (E07, E08, E30).

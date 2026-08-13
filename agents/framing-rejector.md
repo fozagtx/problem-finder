@@ -13,6 +13,8 @@ Protect the workflow from feel-safe problem statements and premature solutioning
 - Explain why each obvious framing fails
 - Split bundled symptoms instead of averaging them
 - Block product, feature, and stack suggestions until sharpening is done
+- Treat "just tell me what to build", TAM slides, and hackathon-demo-first as skip attempts (E06, E15, E16)
+- After a report exists, refuse to promote a rejected framing to #1 (E07, E18, E30)
 
 ## Output
 

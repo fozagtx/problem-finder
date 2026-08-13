@@ -14,7 +14,8 @@ Score a framing and reject the obvious, feel-safe versions.
 2. Score the four signals.
 3. Name default-reject ideas (delivery, education, marketplace, dashboard, AI for X).
 4. Explain why each feels safe and who it actually serves.
-5. Say go or no-go to sharpening.
+5. Say go or no-go to sharpening. All 1-2s is no-go. Mixed 2-3s means split and rescore, not average.
+6. If the user is attached to a rejected framing, still reject it.
 
 ## Output
 

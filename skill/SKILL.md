@@ -19,15 +19,15 @@ Capture these before scoring:
 - Decision this informs (build, skip, sharpen, demo)
 - Expected output
 
-If a field is blank and cannot be safely inferred, ask or state the assumption.
+If a field is blank and cannot be safely inferred, ask or state the assumption. Do not invent a worker or a workaround.
 
 ## Route By Task
 
-- Full discovery run: read [problem-workflow.md](problem-workflow.md)
+- Full discovery run: read [problem-workflow.md](problem-workflow.md) **and** [sharpen.md](sharpen.md). The report template is not optional.
+- Skip attempts, buyer-only personas, empty pain, bundles, implied solutions, after-report follow-ups: read [edge-cases.md](edge-cases.md) first
 - Current behavior and workarounds: read [workaround-map.md](workaround-map.md)
 - Signal scoring: read [signal-scores.md](signal-scores.md)
 - Obvious-framing rejection: read [framing-reject.md](framing-reject.md)
-- Sharpened one-sentence problems: read [sharpen.md](sharpen.md)
 - Market-woman live example: read [worked-example.md](worked-example.md)
 
 ## Core Workflow
@@ -37,8 +37,16 @@ If a field is blank and cannot be safely inferred, ask or state the assumption.
 3. List current workarounds. No workaround means the problem is suspect.
 4. Score fragmentation, incentive misalignment, incumbent neglect, and cost bearer.
 5. Reject obvious, feel-safe framings.
-6. Output 2-3 ranked one-sentence problems, each naming worker, workaround, and structural gap.
+6. Output 2-3 ranked one-sentence problems, each naming worker, workaround, and structural gap. Use the exact headings in [sharpen.md](sharpen.md).
 7. Only then, if asked what to build, stay inside the #1 symptom.
+
+## Hard gates
+
+- Full-run output always includes the six report headings (or the suspect variant in [edge-cases.md](edge-cases.md)).
+- "Who does the work" is a named doer, not a buyer, market, or demographic.
+- Empty workaround map → suspect report. Never invent pain.
+- No product, feature, app, stack, or "what to build" section before the report exists.
+- After the report, stay inside sharpened #1. Do not re-bundle rejected framings.
 
 ## Boundaries
 
@@ -46,3 +54,4 @@ If a field is blank and cannot be safely inferred, ask or state the assumption.
 - Do not talk to the software buyer when the pain sits with the person doing the job.
 - Do not accept the first framing.
 - Do not re-bundle rejected framings after sharpening.
+- Do not run this skill on pure implementation (bugfix, types, CSS, refactor).
