@@ -8,7 +8,7 @@ It forces worker identification, workaround mapping, signal scoring, obvious-fra
 
 | Area | Outcome |
 |---|---|
-| Problem restatement | Rewrite the idea from the person doing the work, not the person buying software |
+| Problem restatement | Rewrite the idea from the person doing the work |
 | Workaround mapping | List what people already do today; flag framings with no felt pain |
 | Signal scoring | Score fragmentation, incentive misalignment, incumbent neglect, and who bears the cost |
 | Framing rejection | Kill obvious, feel-safe, razor-thin problems by default |
@@ -141,13 +141,13 @@ problem-finder/
 The skill should make an agent:
 
 - Preserve the messy original framing before cleaning it up
-- Name the person doing the work, not the software buyer
+- Name the person doing the work
 - Refuse to proceed when there is no current workaround
 - Reject obvious, feel-safe framings and say why
 - Score the four signals before writing a problem sentence
 - Produce 2-3 ranked problems that each name worker, workaround, and structural gap
 - Refuse buyer/market/demographic as the worker
-- Emit a suspect report instead of inventing workarounds
+- Emit a suspect report. Do not invent workarounds
 - Stay inside sharpened #1 after the report exists
 
 ## Board

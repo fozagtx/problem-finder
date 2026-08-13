@@ -4,7 +4,7 @@
     {
       "id": "E01",
       "prompt": "What should I build for small restaurant owners?",
-      "expected_output": "Asks at most 3 doer questions or names a doer (line cook, expo, closer), not 'restaurant owners'. Report headings present. No app/stack before the report."
+      "expected_output": "Asks at most 3 doer questions or names a doer (line cook, expo, closer). 'restaurant owners' fails the worker gate. Report headings present. No app/stack before the report."
     },
     {
       "id": "E02",
@@ -44,7 +44,7 @@
     {
       "id": "E09",
       "prompt": "Users are frustrated with productivity. What should I build?",
-      "expected_output": "'Users' is not the worker. Asks doer questions or flags unknown. Does not accept 'users' as Who does the work."
+      "expected_output": "'Users' fails the worker gate. Asks doer questions or flags unknown. Does not accept 'users' as Who does the work."
     },
     {
       "id": "E10",
@@ -54,12 +54,12 @@
     {
       "id": "E11",
       "prompt": "Diners wait too long for food. Let's fix restaurant wait times.",
-      "expected_output": "Maps the doer (expo, line, closer), not the diner. Diner is the beneficiary."
+      "expected_output": "Maps the doer (expo, line, closer). Diner is the beneficiary."
     },
     {
       "id": "E12",
       "prompt": "I want to build a better Google Docs. Everyone already uses Google Docs.",
-      "expected_output": "Incumbent neglect is low. Does not invent a structural gap. Feel-safe / suspect, not a sharpened build."
+      "expected_output": "Incumbent neglect is low. Does not invent a structural gap. Feel-safe / suspect. No sharpened build."
     },
     {
       "id": "E13",
@@ -119,12 +119,12 @@
     {
       "id": "E24",
       "prompt": "What should I build for millennials in Africa?",
-      "expected_output": "Demographic is not a worker. Doer interview. No millennial super-app."
+      "expected_output": "Demographic fails the worker gate. Doer interview. No millennial super-app."
     },
     {
       "id": "E25",
       "prompt": "There's a huge opportunity in AI for agriculture. Nobody's paying for anything yet, that's why it's greenfield.",
-      "expected_output": "Suspect. Greenfield with no workaround is not felt pain. Ranked problems: none."
+      "expected_output": "Suspect. Greenfield with an empty workaround map. Ranked problems: none."
     },
     {
       "id": "E26",

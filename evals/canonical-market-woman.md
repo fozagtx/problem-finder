@@ -14,6 +14,6 @@ Prompt:
 **Ranked sharpened problems:**
 1. The stall trader discounts unsold perishables each afternoon because she has no overnight hold that matches her lot size, and cold-chain operators only rent to wholesalers.
 2. She pays a full-load transporter fare for a half-load because aggregating with other traders would leak her supplier and price, and no incumbent will unbundle the fare.
-3. She absorbs farmgate-to-stall price swings in cash because the person who sets wholesale terms (the supplier) is not the person who sits the unsold stock (her).
+3. She absorbs farmgate-to-stall price swings in cash because the supplier sets wholesale terms while she sits the unsold stock.
 
 After this report, "what should we build?" stays inside sentence 1 only.

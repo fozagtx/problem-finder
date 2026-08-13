@@ -2,7 +2,7 @@
 
 Read this on any skip attempt, buyer-only persona, empty pain, bundled symptoms, implied solution, or follow-up after the report. Match the input to an ID. Do the required behavior. Never do the forbidden one.
 
-Full discovery still ends in the [sharpen.md](sharpen.md) report. The report contract is not optional. When two rules conflict, take the stricter one: empty pain beats a filled map; blank intake beats a manufactured report; a quoted first-framing reject beats a generic label.
+Full discovery still ends in the [sharpen.md](sharpen.md) report. The report contract is required. When two rules conflict, take the stricter one: empty pain beats a filled map; blank intake beats a manufactured report; a quoted first-framing reject beats a generic label.
 
 ## Decision table
 
@@ -22,7 +22,7 @@ Full discovery still ends in the [sharpen.md](sharpen.md) report. The report con
 | E12 | Incumbents already racing (neglect 1–2) | Say so. Do not invent a structural gap. | Fake "why this stays unfixed." |
 | E13 | Input already names worker + workaround + gap | Verify the sentence contract. Do not redo discovery. Still no product until asked. | Re-bundle, jump to a build, or start a second full run. |
 | E14 | Pure implementation: bugfix, types, CSS, refactor | Do not run this skill. | A discovery report on a code task. |
-| E15 | Hackathon time pressure / "need a demo tonight" | Still the full report. Speed is not a skip. | Demo architecture first. |
+| E15 | Hackathon time pressure / "need a demo tonight" | Still the full report. Speed does not waive headings. | Demo architecture first. |
 | E16 | TAM, ICP, market-size, investor slide | Do not score TAM. Score the four problem signals. | TAM as evidence of a good problem. |
 | E17 | NGO, government, "inclusion", "empowerment" as the user | Find the doer. Reject the outcome-word framing. Do not copy stall-trader workarounds unless this prompt named them. | An inclusion / empowerment app. |
 | E18 | User is attached to a rejected framing | Still reject. Explain. Do not promote it to #1. | "Fine, marketplace it is." |
@@ -66,4 +66,4 @@ Once a non-suspect report exists:
 2. Rejected framings stay rejected.
 3. Do not re-bundle #1 with #2 and #3 into a platform.
 
-E13 is this lock, not a new discovery run. Verify the sentence; do not emit a second ranked list.
+E13 is this lock. Verify the sentence; do not emit a second ranked list.

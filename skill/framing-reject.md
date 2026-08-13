@@ -10,7 +10,7 @@ The first framing is almost always a bundle: several symptoms, several stakehold
 
 Before scoring, quote the user's first framing in their own words — the product noun, the "AI for X" clause, "Uber for…", "marketplace", "dashboard", "tutor", "platform", "as a service", "that's the whole product". Put that quote in **Rejected obvious framings**. Then kill it.
 
-A generic label without that quote is not a reject. "Dashboard / AI for X" is not enough if they said "an AI dashboard for warehouse managers to cut waste." Do not skip the quote because a later symptom looks sharper, because they said "that's the whole product," or because they are attached to the vision (E18).
+Quote their words. A class label ("Dashboard / AI for X") fails if they named a specific product. Do not skip the quote because a later symptom looks sharper, because they said "that's the whole product," or because they are attached to the vision (E18).
 
 If the prompt is only a product sentence and names no workaround, stop at the suspect report. Do not import workarounds from [worked-example.md](worked-example.md). That file is only for the stall-trader spoilage + price + transport prompt (E26). Leave it closed for agriculture, literacy, inclusion, or "African markets."
 
@@ -28,7 +28,7 @@ Treat these as guilty until a workaround and a structural gap are named:
 - TAM / ICP as proof the problem is real (E16)
 - Re-bundling rejected framings after the report (E07, E30)
 
-Attachment is not evidence. If the user wants the marketplace anyway, still reject it (E18).
+Attachment does not unlock a rejected framing. If the user wants the marketplace anyway, still reject it (E18).
 
 ## Rejection template
 

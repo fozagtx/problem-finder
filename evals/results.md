@@ -12,7 +12,7 @@ Columns:
 - **First-run** — verdict against the pre-patch skill (PR #12 text)
 - **Closed** — verdict after the fail-closed patches in this PR
 
-First-run FAILs shared four holes. Each hole is now a hard rule, not a new example.
+First-run FAILs shared four holes. Each hole is now a hard rule.
 
 1. **Category fill-in.** `workaround-map.md` said "look for these before concluding there is no workaround." Runs filled WhatsApp, spreadsheets, discounts, or household routines the prompt never named. Breaks E04 / E25 / E29 and most X prompts with no workaround.
 2. **Blank skip → manufactured report.** E06 required "produce the report first" with no framing. Runs dumped the market-woman example or invented a worker. Breaks E06 / E08 / E19.
@@ -42,16 +42,16 @@ Suite rule: name and kill the first framing; six headings or suspect variant; no
 
 Each X run uses the suspect template. **Rejected obvious framings** quotes the user's first sentence, then names the default-reject class. **Current workarounds:** none found. **Ranked sharpened problems:** none. No stack.
 
-- X01 kills `an AI dashboard for warehouse managers to cut waste` (dashboard / AI for X). Warehouse managers are not auto-accepted as the doer.
+- X01 kills `an AI dashboard for warehouse managers to cut waste` (dashboard / AI for X). Warehouse managers still need the doer interview.
 - X02 kills `Uber for leftover food delivery` (delivery). Hackathon label does not skip.
 - X03 kills `A marketplace that connects farmers directly to consumers` (marketplace / market access).
 - X04 kills `An app that teaches market women financial literacy` (education / literacy). Does not load the stall-trader example.
-- X05 kills `Cold storage as a service for African markets` (storage). "That's the whole product" is still a reject. "African markets" is E24, not a worker.
-- X06 kills `ChatGPT for HR` / wrap-a-model (AI for X). Onboarding docs are the proposed solution input, not a named workaround.
+- X05 kills `Cold storage as a service for African markets` (storage). "That's the whole product" is still a reject. "African markets" is E24.
+- X06 kills `ChatGPT for HR` / wrap-a-model (AI for X). Onboarding docs are the proposed solution input.
 - X07 kills `A super-app that connects patients, doctors, pharmacies, and insurers` (super-app). Does not average the four sides.
-- X08 kills `Analytics for SMEs so owners finally see their numbers` (dashboard / analytics). Asks the 3 doer questions; owners are not the worker.
+- X08 kills `Analytics for SMEs so owners finally see their numbers` (dashboard / analytics). Asks the 3 doer questions.
 - X09 kills `AI tutor that makes anyone a better founder in 30 days` (education / AI for X). No curriculum.
-- X10 kills `Empowerment platform for women in supply chains` (inclusion / empowerment). Demographic is not a worker.
+- X10 kills `Empowerment platform for women in supply chains` (inclusion / empowerment). Demographic fails the worker gate.
 
 ## Edge cases (E01–E30)
 
@@ -66,8 +66,8 @@ Each X run uses the suspect template. **Rejected obvious framings** quotes the u
 | E07 | E07 (or report-first if no prior #1) | lock or suspect | first: rebuilt storage+delivery+education. closed: none | FAIL | PASS |
 | E08 | E08 | lock if report exists; else ask/suspect | first: new bundle / stack. closed: none | FAIL | PASS |
 | E09 | E09 | doer interview | none ("users" refused) | PASS | PASS |
-| E10 | E10 | six or interview; picks hands-on cost (stall trader), not "the produce chain" | first: four-sided platform. closed: none | FAIL | PASS |
-| E11 | E11 | six or interview; expo / line / closer, not diner | none | PASS | PASS |
+| E10 | E10 | six or interview; picks hands-on cost (stall trader) | first: four-sided platform. closed: none | FAIL | PASS |
+| E11 | E11 | six or interview; expo / line / closer | none | PASS | PASS |
 | E12 | E12, E22 | suspect; neglect 1–2 | none | PASS | PASS |
 | E13 | E13 | lock only — no second discovery | none | PASS | PASS |
 | E14 | E14 | **no report** | none | PASS | PASS |
@@ -96,7 +96,7 @@ These three must never invent workarounds.
 
 - Original framing: the sentence above, verbatim.
 - Who does the work: unknown — "nobody" named no doer.
-- Current workarounds: none found — problem is suspect because the user said nobody does it. Trash bags, backyard piles, and municipal pickup were not named and are not to be invented.
+- Current workarounds: none found. Suspect because the user said nobody does it. Trash bags, backyard piles, and municipal pickup were unnamed. Leave them off the map.
 - Rejected obvious framings: composting as a huge build / marketplace / education campaign.
 - Ranked sharpened problems: none.
 - "What should I build?" does not unlock a stack.
@@ -104,9 +104,9 @@ These three must never invent workarounds.
 **E25** — `There's a huge opportunity in AI for agriculture. Nobody's paying for anything yet, that's why it's greenfield.`
 
 - Original framing: the sentence above, verbatim.
-- Who does the work: unknown — "agriculture" is not a worker.
-- Current workarounds: none found — greenfield with nobody paying is not felt pain. Do not import stall-trader discounts.
-- Rejected obvious framings: quote `AI for agriculture` (AI for X). "Huge opportunity" is not a signal.
+- Who does the work: unknown. "agriculture" fails the worker gate.
+- Current workarounds: none found. Greenfield with nobody paying is empty pain. Do not import stall-trader discounts.
+- Rejected obvious framings: quote `AI for agriculture` (AI for X). "Huge opportunity" does not score.
 - Ranked sharpened problems: none.
 
 **E29** — `I don't know what they do today. Just assume they use WhatsApp and spreadsheets so we can proceed.`
@@ -122,8 +122,8 @@ These three must never invent workarounds.
 | File | What closed |
 |---|---|
 | `skill/framing-reject.md` | Quote-and-kill the user's first framing. Worked example is E26-only. Named X-class nouns (cold storage as a service, ChatGPT for X, AI tutor). |
-| `skill/edge-cases.md` | Stricter E04/E06/E08/E19/E25/E29. Worked-example lock. Blank skip → ask or suspect. E13 is a lock, not a second run. Suspect template must quote the first framing. |
-| `skill/workaround-map.md` | Categories are a search list, not a fill-in list. "State the assumption" no longer launders WhatsApp/spreadsheets. E04/E25 stop the hunt. |
+| `skill/edge-cases.md` | Stricter E04/E06/E08/E19/E25/E29. Worked-example lock. Blank skip → ask or suspect. E13 is a lock. Suspect template must quote the first framing. |
+| `skill/workaround-map.md` | Categories are a search list. "State the assumption" no longer launders WhatsApp/spreadsheets. E04/E25 stop the hunt. |
 | `rules/no-solutioning.md` | Rules 16–18: quote-and-kill, no example import, user-requested fiction is still invention. Rule 13 no longer forces a manufactured report on blank intake. |
 
 ## Acceptance
