@@ -12,7 +12,7 @@ Before scoring, quote the user's first framing in their own words — the produc
 
 A generic label without that quote is not a reject. "Dashboard / AI for X" is not enough if they said "an AI dashboard for warehouse managers to cut waste." Do not skip the quote because a later symptom looks sharper, because they said "that's the whole product," or because they are attached to the vision (E18).
 
-If the prompt is only a product sentence and names no workaround, stop at the suspect report. Do not import workarounds from [worked-example.md](worked-example.md). That file is only for the stall-trader spoilage + price + transport prompt (E26). It is not a workaround library for agriculture, literacy, inclusion, or "African markets."
+If the prompt is only a product sentence and names no workaround, stop at the suspect report. Do not import workarounds from [worked-example.md](worked-example.md). That file is only for the stall-trader spoilage + price + transport prompt (E26). Leave it closed for agriculture, literacy, inclusion, or "African markets."
 
 ## Default rejects
 

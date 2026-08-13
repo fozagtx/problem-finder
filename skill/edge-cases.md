@@ -41,7 +41,7 @@ Full discovery still ends in the [sharpen.md](sharpen.md) report. The report con
 
 ## Worked-example lock
 
-[worked-example.md](worked-example.md) is only for E03 / E26 (stall trader, spoilage + price + transport). It is not a workaround library. Do not copy discounts, informal credit, or transporter fares onto literacy, inclusion, composting, agriculture-greenfield, "African markets," or any other prompt.
+[worked-example.md](worked-example.md) is only for E03 / E26 (stall trader, spoilage + price + transport). Do not copy discounts, informal credit, or transporter fares onto literacy, inclusion, composting, agriculture-greenfield, "African markets," or any other prompt.
 
 ## Suspect report
 

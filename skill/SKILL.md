@@ -7,7 +7,7 @@ description: Force a problem-discovery pass before any solutioning. Decompose st
 
 Use this skill when a startup idea, hackathon idea, or "what should I build" request needs a real problem before anyone starts solutioning.
 
-Builders are good at solutioning, not probleming. Obvious, visible, razor-thin problems feel safe. They are not. A solution already on the table is a clue about a suspected problem, not permission to skip discovery.
+Builders jump to solutions. A pitch already on the table is a clue about a suspected problem. Run discovery anyway.
 
 ## Intake
 
@@ -43,7 +43,7 @@ If a field is blank and cannot be safely inferred, ask or state the assumption. 
 ## Hard gates
 
 - Full-run output always includes the six report headings (or the suspect variant in [edge-cases.md](edge-cases.md)).
-- "Who does the work" is a named doer, not a buyer, market, or demographic.
+- "Who does the work" names a doer. Buyer, market, and demographic fail this gate.
 - Empty workaround map → suspect report. Never invent pain.
 - No product, feature, app, stack, or "what to build" section before the report exists.
 - After the report, stay inside sharpened #1. Do not re-bundle rejected framings.

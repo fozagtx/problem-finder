@@ -19,7 +19,7 @@ Builders are good at solutioning and weak at probleming. Startup and hackathon w
 
 ## Novelty
 
-Most idea workflows tell agents to "brainstorm solutions" or "validate the market." This skill forces the agent to name the worker, map current workarounds, score structural signals, reject obvious framings, and write one-sentence problems before any build advice. It is tuned for builders, where the failure mode is not lack of ideas. It is premature solutioning.
+Most idea workflows tell agents to "brainstorm solutions" or "validate the market." This skill forces the agent to name the worker, map current workarounds, score structural signals, reject obvious framings, and write one-sentence problems before any build advice. The failure mode is premature solutioning.
 
 ## Kit Fit
 

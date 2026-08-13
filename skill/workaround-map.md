@@ -31,7 +31,7 @@ If after three answers there is still no doer, emit the suspect report. Do not i
 
 ## Workaround categories
 
-These are a search list, not a fill-in list. Only record a category if the user named it or a doer interview actually produced it. Copying "WhatsApp groups" or "spreadsheets" onto a prompt that did not name them is inventing a workaround (E29).
+These are a search list. Only record a category if the user named it or a doer interview actually produced it. Copying "WhatsApp groups" or "spreadsheets" onto a prompt that did not name them is inventing a workaround (E29).
 
 Do not complete this list from imagination, from [worked-example.md](worked-example.md), or because the user said "just assume they use X."
 

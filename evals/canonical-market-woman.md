@@ -7,7 +7,7 @@ Prompt:
 > A market woman loses money to spoilage, price hurdles, and transportation.
 
 **Original framing:** A market woman loses money to spoilage, price hurdles, and transportation.
-**Who does the work:** The stall trader herself. She buys at farmgate or wholesale, hauls goods, prices them, and sits the stall. Not "the market," not farmers, not an NGO buyer.
+**Who does the work:** The stall trader herself. She buys at farmgate or wholesale, hauls goods, prices them, and sits the stall. Farmers, NGOs, and "the market" are other people.
 **Current workarounds:** Sells early at a discount to beat rot. Splits stock across relatives' stalls. Borrows informal credit after a bad day. Pays a transporter a fixed fare regardless of volume. Keeps a mental price book because posted prices lag.
 **Signal scores:** fragmentation 4/5 · incentive misalignment 5/5 · incumbent neglect 4/5 · cost bearer 5/5
 **Rejected obvious framings:** Cold storage, delivery, or a market-access app — solutions looking for a buyer. She already has a stall and a route. Logistics incumbents exist; they do not serve her ticket size. Price education — she already knows prices. The gap is that she cannot hold inventory long enough to wait for a better bid. "Financial inclusion" — too wide, no workaround named.

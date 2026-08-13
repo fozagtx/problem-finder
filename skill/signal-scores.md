@@ -27,4 +27,4 @@ Use for scoring whether a framing is a good problem or a feel-safe one.
 - How clearly the user can pitch it
 - How large the TAM slide would look
 
-Those are solutioning tells. They make a builder feel safe. They are not evidence of a good problem.
+Those are solutioning tells. They make a builder feel safe. Drop them and score the four signals.

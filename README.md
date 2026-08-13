@@ -1,8 +1,8 @@
 # Problem Finder
 
-An AI agent skill for builders who need to turn a messy startup idea, hackathon prompt, or "what should I build" question into a worker-backed problem — before anyone starts solutioning.
+An AI agent skill for builders who need to turn a messy startup idea, hackathon prompt, or "what should I build" question into a worker-backed problem before anyone starts solutioning.
 
-This skill is designed for idea work where being able to pitch is not enough. It forces worker identification, workaround mapping, signal scoring, obvious-framing rejection, and one-sentence problem synthesis.
+It forces worker identification, workaround mapping, signal scoring, obvious-framing rejection, and one-sentence problem synthesis.
 
 ## What It Helps With
 
@@ -17,13 +17,13 @@ This skill is designed for idea work where being able to pitch is not enough. It
 | Edge-case lock | Buyer-only personas, empty pain, skip-to-stack, and after-report rebundles cannot bypass the report |
 | Method demo | Show the discovery pass working on a live prompt, using the market-woman example |
 
-## What Makes This Different
+## How it works
 
-- It is problem-first. It does not let a pitch become a build until the worker, workaround, and structural gap are explicit.
-- It is designed for builders, who are good at solutioning and weak at probleming. Obvious problems feel safe. They are not.
-- It is progressive and token-efficient. `skill/SKILL.md` routes to focused files only when needed.
-- It is safe to install. The scripts only copy local Markdown files into a selected skills directory.
-- It is kit-ready. The repo includes agents, commands, rules, validation, and a live worked example.
+- A pitch cannot become a build until the worker, workaround, and structural gap are explicit.
+- Built for people who solution by reflex. Discovery runs first.
+- `skill/SKILL.md` routes to focused files only when needed.
+- Install scripts copy local Markdown files into a selected skills directory.
+- The repo includes agents, commands, rules, validation, and a live worked example.
 
 ## Installation
 
@@ -33,7 +33,7 @@ A `problem-finder.skill` zip is attached to [GitHub Releases](https://github.com
 
 Clone elsewhere → install into a skills dir. Never install onto the clone.
 
-This repository is a skill kit, not the installed skill. Clone it to a working directory, then run an installer so it copies `skill/` into a skills directory such as `~/.agents/skills/problem-finder` or `~/.claude/skills/problem-finder`. Do not clone this repo into a skills path and then install onto that same path — `install-custom.sh` option 2 would copy `skill/` over the git repo and can eat it. The custom installer refuses if the target looks like this clone (has `.git` and `install.sh`).
+This repository is the skill kit. The installed skill is a copy of `skill/` in a skills directory such as `~/.agents/skills/problem-finder` or `~/.claude/skills/problem-finder`. Clone it to a working directory, then run an installer. Do not clone this repo into a skills path and then install onto that same path. `install-custom.sh` option 2 would copy `skill/` over the git repo and can eat it. The custom installer refuses if the target looks like this clone (has `.git` and `install.sh`).
 
 ### Recommended
 
