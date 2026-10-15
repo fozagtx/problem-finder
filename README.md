@@ -215,6 +215,20 @@ rm -rf ~/.claude/skills/problem-finder
 
 Standard install may have written `~/.agents/AGENTS.md`. Review that file yourself; uninstall does not revert it.
 
+## Companion skill: Hackathon Winner
+
+`hackathon-winner/` is a separate skill for the rest of the event once the problem is found: picking events, reading the rubric, team roles, sponsor-track stacking, hour-by-hour time plans, the demo, the pitch, and judge Q&A. It is distilled from blog posts by serial hackathon winners (sources in `hackathon-winner/references/sources.md`) and hands idea validation back to Problem Finder.
+
+Install it next to Problem Finder:
+
+```bash
+cp -R hackathon-winner ~/.claude/skills/hackathon-winner
+# or
+cp -R hackathon-winner ~/.agents/skills/hackathon-winner
+```
+
+Then ask something like: "We're entering a 24-hour hackathon with 3 sponsor tracks, here's the rubric. Plan our run."
+
 ## Development
 
 ```bash
